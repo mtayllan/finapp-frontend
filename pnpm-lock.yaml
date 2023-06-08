@@ -35,6 +35,9 @@ devDependencies:
   eslint-plugin-svelte:
     specifier: ^2.26.0
     version: 2.30.0(eslint@8.42.0)(svelte@3.59.1)
+  pocketbase:
+    specifier: ^0.15.1
+    version: 0.15.1
   postcss:
     specifier: ^8.4.24
     version: 8.4.24
@@ -1663,6 +1666,10 @@ packages:
     resolution: {integrity: sha512-2pWd6G7OHKemc5x1r1rp8aQcpvDh7goMBZlJv6Co5vCNLVcQJdhxRL09SGaY6HcyHH9aT4tiynZabMofVasBYw==}
     engines: {node: '>=14'}
     hasBin: true
+    dev: true
+
+  /pocketbase@0.15.1:
+    resolution: {integrity: sha512-iOj9bCP7m/kQDhkJZiLXWYNYXwZg+MeCFwJeivM46Uj4QwqzzQPeZH195TPicnj2VwxiSkziVnDNke1Mc9VEaA==}
     dev: true
 
   /postcss-import@15.1.0(postcss@8.4.24):
