@@ -2,4 +2,7 @@
   import '../app.css';
 </script>
 
-<slot />
+<title>FinApp</title>
+<div class="p-5">
+  <slot />
+</div>
