@@ -1,8 +1,9 @@
 import PocketBase from 'pocketbase';
 import { POCKETBASE_API_URL } from '$env/static/private';
 import { redirect } from '@sveltejs/kit';
+import type { Handle } from '@sveltejs/kit';
 
-export const handle = async ({ event, resolve }) => {
+export const handle = (async ({ event, resolve }) => {
   event.locals.pb = new PocketBase(POCKETBASE_API_URL);
   event.locals.pb.authStore.loadFromCookie(event.request.headers.get('cookie') || '');
 
@@ -21,4 +22,4 @@ export const handle = async ({ event, resolve }) => {
   response.headers.set('set-cookie', event.locals.pb.authStore.exportToCookie());
 
   return response;
-};
+}) satisfies Handle;

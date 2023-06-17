@@ -1,5 +1,5 @@
-import { redirect } from '@sveltejs/kit';
+import type { LayoutServerLoad } from './$types';
 
-export function load({ locals }) {
+export const load = (async ({ locals }) => {
   return { currentUser: locals.currentUser };
-}
+}) satisfies LayoutServerLoad;
